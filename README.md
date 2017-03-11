@@ -29,7 +29,6 @@ export default class HomePage extends Component {
   }
 
   render() {
-    console.log(this.props.test);
     return (
       <div>
         <AppBar
@@ -41,7 +40,7 @@ export default class HomePage extends Component {
             right: '0px',
             left: '0px',
           }}
-          title="Kairos"
+          title="Test"
         />
         Test
       </div>
