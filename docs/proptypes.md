@@ -3,7 +3,7 @@
 
 Decorate a component with this function.
 
-This is just a convenience decorator for using React.PropTypes. It just adds some syntactic sugar when adding your props to the component so you can keep them outside and above the class with the rest of you configuration.
+This is just a convenience decorator for using React.PropTypes. It just adds some syntactic sugar when adding your props to the component so you can keep them outside and above the class with the rest of your configuration.
 
 object: ```{ prop: PropType }```
 
