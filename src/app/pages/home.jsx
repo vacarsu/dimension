@@ -30,9 +30,8 @@ export default class HomePage extends Component {
             right: '0px',
             left: '0px',
           }}
-          title="Kairos"
+          title={this.props.test}
         />
-        Test
       </div>
     )
   }

@@ -29,6 +29,7 @@ export default class HomePage extends Component {
   }
 
   render() {
+    console.log(this.props.test);
     return (
       <div>
         <AppBar
@@ -40,16 +41,15 @@ export default class HomePage extends Component {
             right: '0px',
             left: '0px',
           }}
-          title="Test"
+          title={this.props.test}
         />
-        Test
       </div>
     )
   }
 }
 
 // The App container
-// setups up the react router for you
+// sets up the react router for you
 // with material-ui, react-intl, and redux
 // also add a service worker for offline functionality
 @DimApp({
