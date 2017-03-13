@@ -43,7 +43,6 @@ export default class HomePage extends Component {
             position: 'fixed',
             width: 'auto',
             height: '65px',
-            marginLeft: this.props.marginLeft,
             right: '0px',
             left: '0px',
           }}
