@@ -1,5 +1,5 @@
 # DimPage
-### ** Class Decorator **
+### **Class Decorator**
 
 Decorate a page component with this function.
 Requires an object with a path.

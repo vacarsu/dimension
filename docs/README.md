@@ -4,7 +4,7 @@
 ## These docs are a WIP
 
 ## Methods
-#### [bootstrap](/bootstrap.md)
+#### [bootstrap](/docs/bootstrap.md)
 
 ## Decorators
 #### [DimApp](/docs/app.md)

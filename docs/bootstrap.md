@@ -1,5 +1,5 @@
 # DimApp
-### ** Function **
+### **Function**
 
 Convenience method for rendering an App Component. Runs Reacts render function internally.
 Allows you to reduce import code as you can simply import bootstrap from dimension.

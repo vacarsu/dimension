@@ -1,5 +1,5 @@
 # DimState
-### ** Class Decorator **
+### **Class Decorator**
 
 Decorate a component with this function.
 
