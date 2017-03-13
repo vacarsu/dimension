@@ -87,7 +87,7 @@ bootstrap((<App />), document.getElementById('app'));
 ```
 
 ## Documentation
-**Coming Soon**
+#### [Docs](/docs/README.md)
 
 ### MIT Licence
 Copyright 2017 AccessIPD, LLC.
