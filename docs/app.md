@@ -1,5 +1,5 @@
 # DimApp
-### ** Class Decorator **
+### **Class Decorator**
 
 Decorate the app component with this function.
 Requires a setup object with the below structure.
