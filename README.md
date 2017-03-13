@@ -2,17 +2,23 @@
 **A framework for rapidly building Progressive Web Apps**
 
 ## This Framework is in an alpha state
-**There is probably bugs and the API susceptible to change**
+**There is probably bugs and the API is susceptible to change**
 
 ## Get Started
-**NPM/Yarn install coming soon**
+**NPM**
+```
+npm install dimension --save
+```
+**Yarn**
+```
+yarn add dimension
+```
 
 #### To create an app just do the following
 ```javascript
 
-import { bootstrap, DimApp, DimPage, DimPropTypes, DimState } from 'dimension';
-import { defaultTheme } from 'dimension';
 import React, { Component, PropTypes } from 'react';
+import { bootstrap, defaultTheme, DimApp, DimPage, DimPropTypes, DimState } from 'dimension';
 import AppBar from 'material-ui/AppBar';
 
 // The HomePage of your app
@@ -61,6 +67,9 @@ export default class HomePage extends Component {
     locale: 'en',
     serviceWorker: '/worker.js',
     state: {
+      /*store: reduxStore
+      if you want to manage the redux store yourself, add the store directly
+      without initialState and reducers*/
       initialState: initialState, // the initial state of your redux store
       reducers: {                 // Provide reducers separately, the decorator will combine them for you
         test
@@ -73,7 +82,7 @@ export default class App extends Component {
     super(props);
   }
 }
-// render the app on the screen
+// render the app on the screen or use react render directly.
 bootstrap((<App />), document.getElementById('app'));
 
 ```

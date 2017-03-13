@@ -41,7 +41,12 @@ export function DimApp(setup) {
     target.prototype.render = () => (
       <MuiThemeProvider muiTheme={getMuiTheme(setup.config.theme)}>
         <IntlProvider locale={setup.config.locale}>
-          <Provider store={initializeRedux(setup.config.state.reducers, setup.config.state.initialState)}>
+          <Provider
+            store={setup.config.state.store ?
+            setup.config.state.store
+            :
+            initializeRedux(setup.config.state.reducers, setup.config.state.initialState)}
+          >
             <Router history={hashHistory}>
               {setupRoutes(setup.pages)}
             </Router>
