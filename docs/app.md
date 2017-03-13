@@ -6,7 +6,7 @@ Requires a setup object with the below structure.
 It will attach a render function to the class, which will render the MuiThemeProvider, IntlProvider, redux Provider, and React Router based on the pages supplied.
 
 Setup: ```{ pages: array<object>, config: object }```
-Setup.config: ```{ theme: object, local: string, serviceWorker: string, state: object }```
+Setup.config: ```{ theme: object, locale: string, serviceWorker: string, state: object }```
 Setup.config.state: ```{ store?: reduxStore, initialState?: object, reducers: object }```
 
 if you want to manage the redux store yourself only supply the store value.
