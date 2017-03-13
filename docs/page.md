@@ -26,7 +26,7 @@ export default class HomePage extends Component {
 
 ### example with parameters
 ``` javascript
-import { defaultTheme, DimApp } from 'dimension';
+import { DimPage } from 'dimension';
 import React, { Component, PropTypes } from 'react';
 
 @DimPage({
