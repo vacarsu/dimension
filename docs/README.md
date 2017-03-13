@@ -7,7 +7,7 @@
 #### [bootstrap](/bootstrap.md)
 
 ## Decorators
-#### [DimApp](/app)
-#### [DimPage](/page)
-#### [DimPropTypes](/proptypes)
-#### [DimState](/state)
+#### [DimApp](/docs/app.md)
+#### [DimPage](/docs/page.md)
+#### [DimPropTypes](/docs/proptypes.md)
+#### [DimState](/docs/state.md)
