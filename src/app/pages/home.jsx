@@ -6,7 +6,7 @@ import { DimState } from './../../core/state';
 import AppBar from 'material-ui/AppBar';
 
 @DimPage({
-  path: '/'
+  path: '/dimension'
 })
 @DimPropTypes({
   test: PropTypes.string.isRequired
