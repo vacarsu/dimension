@@ -15980,6 +15980,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.addReducer = addReducer;
+// DEPRECATED
 var reducers = exports.reducers = [];
 
 function addReducer(reducer) {

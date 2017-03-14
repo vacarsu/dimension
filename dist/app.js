@@ -301,7 +301,7 @@ var App = (_dec = (0, _.DimApp)({
   config: {
     theme: _theme.defaultTheme,
     locale: 'en',
-    serviceWorker: '/worker.js',
+    serviceWorker: '/dimension/dist/worker.js',
     state: {
       initialState: _initialState.initialState,
       reducers: {
@@ -422,7 +422,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var HomePage = (_dec = (0, _page.DimPage)({
-  path: '/'
+  path: '/dimension'
 }), _dec2 = (0, _proptypes.DimPropTypes)({
   test: _react.PropTypes.string.isRequired
 }), _dec3 = (0, _state.DimState)(['test']), _dec(_class = _dec2(_class = _dec3(_class = function (_Component) {
