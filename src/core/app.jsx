@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -47,7 +47,7 @@ export function DimApp(setup) {
             :
             initializeRedux(setup.config.state.reducers, setup.config.state.initialState)}
           >
-            <Router history={hashHistory}>
+            <Router history={browserHistory}>
               {setupRoutes(setup.pages)}
             </Router>
           </Provider>
