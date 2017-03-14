@@ -13,7 +13,7 @@ import HomePage from './pages/home';
   config: {
     theme: defaultTheme,
     locale: 'en',
-    serviceWorker: '/dimension/dist/worker.js',
+    serviceWorker: '/dimension/worker.js',
     state: {
       initialState: initialState,
       reducers: {
