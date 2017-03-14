@@ -301,7 +301,7 @@ var App = (_dec = (0, _.DimApp)({
   config: {
     theme: _theme.defaultTheme,
     locale: 'en',
-    serviceWorker: '/dimension/dist/worker.js',
+    serviceWorker: '/dimension/worker.js',
     state: {
       initialState: _initialState.initialState,
       reducers: {
