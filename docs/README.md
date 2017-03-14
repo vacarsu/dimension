@@ -11,3 +11,4 @@
 #### [DimPage](/docs/page.md)
 #### [DimPropTypes](/docs/proptypes.md)
 #### [DimState](/docs/state.md)
+#### [DimStyles](/docs/styles.md)

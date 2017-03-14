@@ -57,7 +57,7 @@ exports.default = _shallowEqual2.default;
 
 /***/ }),
 
-/***/ 130:
+/***/ 131:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70,7 +70,7 @@ var initialState = exports.initialState = { test: 'test' };
 
 /***/ }),
 
-/***/ 163:
+/***/ 162:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -129,7 +129,7 @@ function extendChildren(children, extendedProps, extendedChildren) {
 
 /***/ }),
 
-/***/ 165:
+/***/ 164:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(488);
@@ -184,7 +184,7 @@ exports.default = _assign2.default || function (target) {
 
 /***/ }),
 
-/***/ 205:
+/***/ 204:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -237,29 +237,7 @@ exports.default = createHelper;
 
 /***/ }),
 
-/***/ 21:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-exports.default = function (obj, keys) {
-  var target = {};
-
-  for (var i in obj) {
-    if (keys.indexOf(i) >= 0) continue;
-    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
-    target[i] = obj[i];
-  }
-
-  return target;
-};
-
-/***/ }),
-
-/***/ 211:
+/***/ 209:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -280,11 +258,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _theme = __webpack_require__(74);
 
-var _initialState = __webpack_require__(130);
+var _initialState = __webpack_require__(131);
 
-var _testReducer = __webpack_require__(212);
+var _testReducer = __webpack_require__(210);
 
-var _home = __webpack_require__(222);
+var _home = __webpack_require__(221);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -324,7 +302,29 @@ exports.default = App;
 
 /***/ }),
 
-/***/ 212:
+/***/ 21:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+exports.default = function (obj, keys) {
+  var target = {};
+
+  for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;
+    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+    target[i] = obj[i];
+  }
+
+  return target;
+};
+
+/***/ }),
+
+/***/ 210:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -335,7 +335,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.test = test;
 
-var _initialState = __webpack_require__(130);
+var _initialState = __webpack_require__(131);
 
 function test() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -353,38 +353,7 @@ function test() {
 
 /***/ }),
 
-/***/ 213:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DimPropTypes = DimPropTypes;
-/* 
-  This decorator attaches attaches the supplied PropTypes to the decorated class
-  ex: 
-    @DimPropTypes({
-      test: PropTypes.string.isRequired
-    })
-    class HomePage extends Component {
-      constructor(props) {
-        super(props);
-      }
-    }
-*/
-function DimPropTypes(propTypes) {
-  return function (target) {
-    target.PropTypes = propTypes;
-    return target;
-  };
-}
-
-/***/ }),
-
-/***/ 222:
+/***/ 221:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -397,17 +366,13 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _dec2, _dec3, _class;
+var _dec, _dec2, _dec3, _dec4, _class;
 
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _page = __webpack_require__(133);
-
-var _proptypes = __webpack_require__(213);
-
-var _state = __webpack_require__(131);
+var _core = __webpack_require__(130);
 
 var _AppBar = __webpack_require__(350);
 
@@ -421,11 +386,19 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HomePage = (_dec = (0, _page.DimPage)({
+var HomePage = (_dec = (0, _core.DimPage)({
   path: '/dimension'
-}), _dec2 = (0, _proptypes.DimPropTypes)({
+}), _dec2 = (0, _core.DimPropTypes)({
   test: _react.PropTypes.string.isRequired
-}), _dec3 = (0, _state.DimState)(['test']), _dec(_class = _dec2(_class = _dec3(_class = function (_Component) {
+}), _dec3 = (0, _core.DimState)(['test']), _dec4 = (0, _core.DimStyles)({
+  appbar: {
+    position: 'fixed',
+    width: 'auto',
+    height: '65px',
+    right: '0px',
+    left: '0px'
+  }
+}), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_Component) {
   _inherits(HomePage, _Component);
 
   function HomePage(props) {
@@ -442,14 +415,7 @@ var HomePage = (_dec = (0, _page.DimPage)({
         'div',
         null,
         _react2.default.createElement(_AppBar2.default, {
-          style: {
-            position: 'fixed',
-            width: 'auto',
-            height: '65px',
-            marginLeft: this.props.marginLeft,
-            right: '0px',
-            left: '0px'
-          },
+          style: this.styles.appbar,
           title: this.props.test
         })
       );
@@ -457,7 +423,7 @@ var HomePage = (_dec = (0, _page.DimPage)({
   }]);
 
   return HomePage;
-}(_react.Component)) || _class) || _class) || _class);
+}(_react.Component)) || _class) || _class) || _class) || _class);
 exports.default = HomePage;
 
 /***/ }),
@@ -477,7 +443,7 @@ module.exports = { "default": __webpack_require__(232), __esModule: true };
 
 exports.__esModule = true;
 
-var _from = __webpack_require__(134);
+var _from = __webpack_require__(133);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -507,7 +473,7 @@ var getKeys  = __webpack_require__(44)
   , gOPS     = __webpack_require__(83)
   , pIE      = __webpack_require__(61)
   , toObject = __webpack_require__(56)
-  , IObject  = __webpack_require__(139)
+  , IObject  = __webpack_require__(138)
   , $assign  = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -755,7 +721,7 @@ var _extends2 = __webpack_require__(20);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _keys = __webpack_require__(135);
+var _keys = __webpack_require__(134);
 
 var _keys2 = _interopRequireDefault(_keys);
 
@@ -1399,7 +1365,7 @@ var _Tooltip = __webpack_require__(364);
 
 var _Tooltip2 = _interopRequireDefault(_Tooltip);
 
-var _childUtils = __webpack_require__(163);
+var _childUtils = __webpack_require__(162);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2330,7 +2296,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _childUtils = __webpack_require__(163);
+var _childUtils = __webpack_require__(162);
 
 var _events = __webpack_require__(375);
 
@@ -2943,7 +2909,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsTransitionGroup = __webpack_require__(165);
+var _reactAddonsTransitionGroup = __webpack_require__(164);
 
 var _reactAddonsTransitionGroup2 = _interopRequireDefault(_reactAddonsTransitionGroup);
 
@@ -3446,7 +3412,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _toConsumableArray2 = __webpack_require__(136);
+var _toConsumableArray2 = __webpack_require__(135);
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
@@ -3486,7 +3452,7 @@ var _reactDom = __webpack_require__(58);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactAddonsTransitionGroup = __webpack_require__(165);
+var _reactAddonsTransitionGroup = __webpack_require__(164);
 
 var _reactAddonsTransitionGroup2 = _interopRequireDefault(_reactAddonsTransitionGroup);
 
@@ -3891,7 +3857,7 @@ module.exports = __webpack_require__(484).create;
 
 var _prodInvariant = __webpack_require__(35);
 
-var ReactChildren = __webpack_require__(200);
+var ReactChildren = __webpack_require__(199);
 var ReactElement = __webpack_require__(34);
 
 var emptyFunction = __webpack_require__(15);
@@ -4311,8 +4277,8 @@ module.exports = ReactTransitionGroup;
 
 
 
-var KeyEscapeUtils = __webpack_require__(199);
-var traverseAllChildren = __webpack_require__(204);
+var KeyEscapeUtils = __webpack_require__(198);
+var traverseAllChildren = __webpack_require__(203);
 var warning = __webpack_require__(3);
 
 var ReactComponentTreeHook;
@@ -4483,7 +4449,7 @@ var _shallowEqual = __webpack_require__(127);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-var _createHelper = __webpack_require__(205);
+var _createHelper = __webpack_require__(204);
 
 var _createHelper2 = _interopRequireDefault(_createHelper);
 
@@ -4507,7 +4473,7 @@ exports.__esModule = true;
 
 var _react = __webpack_require__(1);
 
-var _createHelper = __webpack_require__(205);
+var _createHelper = __webpack_require__(204);
 
 var _createHelper2 = _interopRequireDefault(_createHelper);
 
@@ -4627,7 +4593,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _ = __webpack_require__(75);
 
-var _appMain = __webpack_require__(211);
+var _appMain = __webpack_require__(209);
 
 var _appMain2 = _interopRequireDefault(_appMain);
 
