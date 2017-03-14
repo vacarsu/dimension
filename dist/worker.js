@@ -1,6 +1,6 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/dimension/',
+  '/dimension/dist',
   '/dimension/dist/bundle.css',
   '/dimension/dist/bundle.js',
   '/dimension/dist/app.js'
