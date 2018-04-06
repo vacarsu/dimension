@@ -24,9 +24,6 @@ import { bootstrap, defaultTheme, DimApp, DimPage, DimPropTypes, DimState } from
 import AppBar from 'material-ui/AppBar';
 
 // The HomePage of your app
-@DimPage({
-  path: '/'
-})
 @DimPropTypes({
   test: PropTypes.string.isRequired
 })
@@ -61,7 +58,7 @@ export default class HomePage extends Component {
 // also add a service worker for offline functionality
 @DimApp({
   pages: [
-    { component: HomePage, children: [] }
+    { path: '/', component: HomePage },
   ],
   config: {
     theme: defaultTheme,          // The material-ui theme just import the default one or create your own
@@ -92,7 +89,7 @@ bootstrap((<App />), document.getElementById('app'));
 #### [Docs](/docs)
 
 ### MIT Licence
-Copyright 2017 AccessIPD, LLC.
+Copyright 2017 Alex Lopez, LLC.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
