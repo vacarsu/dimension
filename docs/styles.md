@@ -24,7 +24,7 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <div styles={this.styles.divStyles}></div>
+      <div style={this.styles.divStyles}></div>
     )
   }
 }

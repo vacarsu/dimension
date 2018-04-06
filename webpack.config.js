@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var nodeExternals = require('webpack-node-externals');
 
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
@@ -10,7 +11,8 @@ module.exports = {
     app: './src/app/app.jsx'
   },
   output: {
-    library: 'dimension',
+    library: '[name]',
+    libraryTarget: 'umd',
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
@@ -18,6 +20,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     modules: ['src', 'node_modules']
   },
+  // externals: [nodeExternals()],
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, options: { plugins: ['transform-decorators-legacy'] } },

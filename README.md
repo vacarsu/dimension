@@ -4,6 +4,8 @@
 ## This Framework is in an alpha state
 **There is probably bugs and the API is susceptible to change**
 
+**NPM package currently not yet up to date**
+
 ## Get Started
 **NPM**
 ```

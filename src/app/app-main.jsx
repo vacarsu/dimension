@@ -8,12 +8,12 @@ import HomePage from './pages/home';
 
 @DimApp({
   pages: [
-    { component: HomePage, children: [] }
+    { path: '/', component: HomePage, children: [] }
   ],
   config: {
     theme: defaultTheme,
     locale: 'en',
-    serviceWorker: '/dimension/worker.js',
+    // serviceWorker: '/dimension/worker.js',
     state: {
       initialState: initialState,
       reducers: {

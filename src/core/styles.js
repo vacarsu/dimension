@@ -1,18 +1,26 @@
 /* 
   This decorator attaches your styles to the class
   ex: 
-    @DimPropTypes({
-      test: PropTypes.string.isRequired
+    @DimStyles({
+      divStyles: {
+        width: '100%'
+      }
     })
-    class HomePage extends Component {
+    export default class HomePage extends Component {
       constructor(props) {
         super(props);
+      }
+
+      render() {
+        return (
+          <div style={this.styles.divStyles}></div>
+        )
       }
     }
 */
 export function DimStyles(styles) {
   return function(target) {
-    target.styles = styles;
+    target.prototype.styles = styles;
     return target;
   }
 }

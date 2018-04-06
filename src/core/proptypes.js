@@ -12,7 +12,7 @@
 */
 export function DimPropTypes(propTypes) {
   return function(target) {
-    target.PropTypes = propTypes;
+    target.propTypes = propTypes;
     return target;
   }
 }

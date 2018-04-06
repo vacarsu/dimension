@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter, HashRouter as Router, Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -20,7 +22,7 @@ import { store } from './../state/store';
   ex: 
     @DimApp({
       pages: [
-        List page components
+        { path: '/', component: HomeComponent }
       ],
       config: {
         theme: defaultTheme,
@@ -35,9 +37,9 @@ import { store } from './../state/store';
     }
 */
 export function DimApp(setup) {
+  console.log(setup.pages)
   return function(target) {
     if(setup.config.serviceWorker) startWorker(setup.config.serviceWorker);
-
     target.prototype.render = () => (
       <MuiThemeProvider muiTheme={getMuiTheme(setup.config.theme)}>
         <IntlProvider locale={setup.config.locale}>
@@ -47,8 +49,12 @@ export function DimApp(setup) {
             :
             initializeRedux(setup.config.state.reducers, setup.config.state.initialState)}
           >
-            <Router history={browserHistory}>
-              {setupRoutes(setup.pages)}
+            <Router>
+              <div>
+                {setup.pages.map((page, i) =>
+                  <Route key={i} {...page} />
+                )}
+              </div>
             </Router>
           </Provider>
         </IntlProvider>

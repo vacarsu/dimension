@@ -1,5 +1,6 @@
 # DimPage
 ### **Class Decorator**
+### **THIS IS A DEPRECATED API**
 
 Decorate a page component with this function.
 Requires an object with a path.
