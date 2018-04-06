@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var nodeExternals = require('webpack-node-externals');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
@@ -17,7 +18,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.html'],
     modules: ['src', 'node_modules']
   },
   // externals: [nodeExternals()],
@@ -30,6 +31,10 @@ module.exports = {
   },
   plugins: [
     new CommonsChunkPlugin({name: 'vendors', filename: 'bundle.js', minChunks: Infinity}),
-    new ExtractTextPlugin("bundle.css")
+    new ExtractTextPlugin("bundle.css"),
+    new HtmlWebpackPlugin({
+      title: 'Dimension Sample',
+      template: 'src/app/index.html'
+    })
   ]
 };
