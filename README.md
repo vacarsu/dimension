@@ -4,6 +4,14 @@
 ## This Framework is in an alpha state
 **There is probably bugs and the API is susceptible to change**
 
+## Run included sample app
+Run ```run git clone https://github.com/vacarsu/dimension.git```
+
+Navigate to the project and run ```npm install```
+
+Once npm has installed all dependencies run ```npm start```
+
+
 **NPM package currently not yet up to date**
 
 ## Get Started
