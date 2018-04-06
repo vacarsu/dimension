@@ -5,8 +5,10 @@ Decorate the app component with this function.
 Requires a setup object with the below structure.
 It will attach a render function to the class, which will render the MuiThemeProvider, IntlProvider, redux Provider, and React Router based on the pages supplied.
 
-Setup: ```{ pages: array<object>, include: function<react element> config: object }```
+Setup: ```{ pages: array<object>, render: function<react element> config: object }```
+
 Setup.config: ```{ theme: object, locale: string, serviceWorker: string, state: object }```
+
 Setup.config.state: ```{ store?: reduxStore, initialState?: object, reducers: object }```
 
 if you want to manage the redux store yourself only supply the store value.
@@ -20,7 +22,7 @@ if you want Dimension to build the store for you.
     { path: '/page1', component: PageComponent },
     { path: '/page2', component: Page2Component }
   ],
-  include: () => (
+  render: () => (
     <div></div>
   ),
   config: {

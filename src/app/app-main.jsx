@@ -10,6 +10,7 @@ import HomePage from './pages/home';
   pages: [
     { path: '/', component: HomePage, children: [] }
   ],
+  render: () => (<div>TEST</div>),
   config: {
     theme: defaultTheme,
     locale: 'en',

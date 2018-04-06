@@ -24,6 +24,9 @@ import { store } from './../state/store';
       pages: [
         { path: '/', component: HomeComponent }
       ],
+      render: () = (
+        <div></div>
+      ),
       config: {
         theme: defaultTheme,
         locale: 'en',
@@ -54,6 +57,7 @@ export function DimApp(setup) {
                 {setup.pages.map((page, i) =>
                   <Route key={i} {...page} />
                 )}
+                {setup.render ? setup.render() : ""}
               </div>
             </Router>
           </Provider>
