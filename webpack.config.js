@@ -34,7 +34,7 @@ module.exports = {
     new ExtractTextPlugin("bundle.css"),
     new HtmlWebpackPlugin({
       title: 'Dimension Sample',
-      template: 'src/app/index.html'
+      template: './src/app/index.html'
     })
   ]
 };

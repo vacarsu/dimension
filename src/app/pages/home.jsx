@@ -22,7 +22,6 @@ export default class HomePage extends Component {
   }
 
   render() {
-    console.log(this.props.test);
     return (
       <div>
         <AppBar

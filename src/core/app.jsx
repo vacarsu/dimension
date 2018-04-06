@@ -40,7 +40,6 @@ import { store } from './../state/store';
     }
 */
 export function DimApp(setup) {
-  console.log(setup.pages)
   return function(target) {
     if(setup.config.serviceWorker) startWorker(setup.config.serviceWorker);
     target.prototype.render = () => (
