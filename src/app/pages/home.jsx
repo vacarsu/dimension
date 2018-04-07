@@ -1,12 +1,13 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { DimPage, DimPropTypes, DimState, DimStyles } from './../../core';
 
 import AppBar from 'material-ui/AppBar';
 
+@DimState(['test'])
 @DimPropTypes({
   test: PropTypes.string.isRequired
 })
-@DimState(['test'])
 @DimStyles({
   appbar: {
     position: 'fixed',

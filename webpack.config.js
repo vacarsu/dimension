@@ -18,7 +18,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.html'],
+    extensions: ['.js', '.jsx', '.css'],
     modules: ['src', 'node_modules']
   },
   // externals: [nodeExternals()],
@@ -34,7 +34,10 @@ module.exports = {
     new ExtractTextPlugin("bundle.css"),
     new HtmlWebpackPlugin({
       title: 'Dimension Sample',
-      template: './src/app/index.html'
+      template: './src/app/index.html',
+      assets: {
+        style  : 'bundle.css',
+      }
     })
   ]
 };

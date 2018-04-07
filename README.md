@@ -5,7 +5,7 @@
 **There is probably bugs and the API is susceptible to change**
 
 ## Run included sample app
-Run ```run git clone https://github.com/vacarsu/dimension.git```
+Run ```git clone https://github.com/vacarsu/dimension.git```
 
 Navigate to the project and run ```npm install```
 

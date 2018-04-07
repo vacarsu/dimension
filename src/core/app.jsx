@@ -8,6 +8,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { IntlProvider } from 'react-intl';
 import { startWorker, setupRoutes, initializeRedux } from './../lib';
 import { store } from './../state/store';
+import 'styles/index.css';
 
 /*
   This decorator abstracts the react-router, redux setup, material-ui setup, and react-intl

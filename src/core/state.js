@@ -13,15 +13,14 @@ import { connect } from 'react-redux';
 */
 export function DimState(stateKeys) {
   const select = (state) => {
-    const stateMap = {};
+    let stateMap = {};
     stateKeys.forEach(key => {
-      stateMap[key] = state[key]
+      stateMap = Object.assign({}, stateMap, { [key]: state[key] });
+      // stateMap[key] = state[key]
     });
     return stateMap;
   }
   return function(target) {
-    return connect(
-      select
-    )(target);
+    return connect(select)(target);
   }
 }
