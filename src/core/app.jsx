@@ -25,7 +25,7 @@ import 'styles/index.css';
       pages: [
         { path: '/', component: HomeComponent }
       ],
-      render: () = (
+      render: () => (
         <div></div>
       ),
       config: {

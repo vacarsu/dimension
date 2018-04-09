@@ -11,9 +11,6 @@ Navigate to the project and run ```npm install```
 
 Once npm has installed all dependencies run ```npm start```
 
-
-**NPM package currently not yet up to date**
-
 ## Get Started
 **NPM**
 ```
@@ -32,10 +29,11 @@ import { bootstrap, defaultTheme, DimApp, DimPage, DimPropTypes, DimState } from
 import AppBar from 'material-ui/AppBar';
 
 // The HomePage of your app
+// All decorators may be placed in any order, the only exception is DimState must come before DimPropTypes.
+@DimState(['test'])
 @DimPropTypes({
   test: PropTypes.string.isRequired
 })
-@DimState(['test'])
 export default class HomePage extends Component {
   constructor(props) {
     super(props);

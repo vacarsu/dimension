@@ -14,7 +14,7 @@ module.exports = {
   output: {
     library: '[name]',
     libraryTarget: 'umd',
-    filename: '[name].js',
+    filename: 'dimension.js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
